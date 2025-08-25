@@ -1,6 +1,20 @@
 package bookrecommender;
 
+/**
+ * PROGETTO REALIZZATO DA:
+ *
+ *  * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+ *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+ *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+ *  * Marcel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+ */
 
+/**
+ * La classe Libro rappresenta un libro con informazioni di base quali il titolo, gli autori, l'anno di pubblicazione,
+ * l'editore e la categoria.
+ *
+ * @author MOUHAMMAD TOURE
+ */
 
 
 public class Libro {

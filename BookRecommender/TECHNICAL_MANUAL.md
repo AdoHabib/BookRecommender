@@ -6,6 +6,7 @@
 - Mouhammad Toure  
 - Daniel Viny Kamdem Tagne  
 - Agnes Balkaire Makouwe  
+- Marcel Precieux Moukoko
 
 **Progetto Laboratorio B: BookRecommender**  
 **Anno accademico: 2024/2025**

@@ -380,6 +380,22 @@ java.rmi.ConnectException: Connection refused
 - **Mouhammad Toure**
 - **Daniel Viny Kamdem Tagne**
 - **Agnes Balkaire Makouwe**
+- **Marcel Precieux Moukoko**
+
+ ## PROGETTO REALIZZATO DA:
+
+    * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+    * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+    * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+    * Marcel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+
+
+ ## E-mail contatti:
+
+ -   **mtoure@studenti.uninsubria.it**
+ -  **dvkamdemtagne@studenti.uninsubria.it**
+ -  **abamakouwe@studenti.uninsubria.it**
+ -  **mpmoukoko@studenti.uninsubria.it**
 
 **Progetto Laboratorio B: BookRecommender**  
 **Anno accademico: 2024/2025**

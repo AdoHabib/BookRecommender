@@ -1,16 +1,25 @@
 package bookrecommender;
 
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  PROGETTO REALIZZATO DA:
+ *
+ *  * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+ *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+ *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+ *  * Maercel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+ */
 
 /**
+ * La classe Consiglio rappresenta i consigli di lettura forniti da un utente per un determinato libro.
+ * Ogni consiglio può contenere fino a un massimo di 3 libri consigliati.
  * Classe consiglio che permette agli utenti di consigliare libri.
- * 
+ *
+ * @author MOUHAMMAD TOURE
  */
+
 public class Consiglio {
 
     private String userID; // ID dell'utente che ha fatto il consiglio
@@ -26,12 +35,16 @@ public class Consiglio {
         
     }
 
-    // Getter per userID
+    /**
+     * @return UserID dell'utente che ha fatto il consiglio
+     */ 
     public String getUserID() {
         return userID;
     }
 
-    // Setter per userID
+    /**
+     * @Set per modificare userID dell'utente che ha fatto il consiglio
+     */ 
     public void setUserID(String userID) {
         this.userID = userID;
     }

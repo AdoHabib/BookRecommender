@@ -8,6 +8,7 @@
 - Mouhammad Toure 
 - Daniel Viny Kamdem Tagne 
 - Agnes Balkaire Makouwe 
+- Marcel Precieux Moukoko
 
 **Progetto Laboratorio A: BookRecommender**  
 

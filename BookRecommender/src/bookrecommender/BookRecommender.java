@@ -11,7 +11,20 @@ import java.rmi.RemoteException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Scanner;
 
+
 /**
+ * Sistema di raccomandazione di libri che permette agli utenti di cercare,
+ * visualizzare,
+ * registrarsi, effettuare login, creare librerie personali, aggiungere
+ * valutazioni e fornire consigli sui libri.
+ *
+ *  PROGETTO REALIZZATO DA:
+ *
+ *  * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+ *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+ *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+ *  * Marcel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+ *
  * Classe principale per il sistema di raccomandazione di libri.
  * Gestisce l'interazione con l'utente e le operazioni sul database.
  */
@@ -117,6 +130,7 @@ public class BookRecommender {
      * @return Informazioni sul libro trovato o messaggio di errore
      */
     public synchronized String cercaLibroConTitolo(String title) {
+        title = title.toLowerCase();
         StringBuilder result = new StringBuilder();
         try (PreparedStatement stmt = getConnection().prepareStatement(
                 "SELECT * FROM libri WHERE titolo = ?")) {

@@ -1,10 +1,23 @@
 package bookrecommender;
 
-
-
-
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * PROGETTO REALIZZATO DA:
+ *
+ *  * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+ *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+ *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+ *  * Maercel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+ */
+
+/**
+ * La classe Libreria rappresenta una libreria virtuale creata da un utente logato, contenente una lista di libri.
+ * Ogni libreria è associata ad un utente specifico e può contenere un numero illimitato di titoli di libri.
+ *
+ * @author MOUHAMMAD TOURE
+ */
 
 public class Libreria {
 

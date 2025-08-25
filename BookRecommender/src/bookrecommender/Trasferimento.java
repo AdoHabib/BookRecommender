@@ -7,6 +7,18 @@ import java.sql.*;
 import java.util.Scanner;
 
 /**
+ *  PROGETTO REALIZZATO DA:
+ *
+ *  * MOUHAMMAD TOURE              -Matricola:     758051      -Sede: VA
+ *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
+ *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
+ *  * Maercel Precieux Moukoko     -Matricola:     759674      -Sede: VA
+ */
+
+/**
+ *
+ * @author MOUHAMMAD TOURE
+ *
  * Classe per il trasferimento dei dati da un file CSV al database PostgreSQL.
  * Legge i dati da un file CSV contenente informazioni sui libri e li inserisce
  * nella tabella corrispondente nel database.
