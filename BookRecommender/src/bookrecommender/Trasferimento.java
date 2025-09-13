@@ -1,7 +1,5 @@
 package bookrecommender;
 
-
-
 import java.io.*;
 import java.sql.*;
 import java.util.Scanner;
@@ -13,15 +11,11 @@ import java.util.Scanner;
  *  * Daniel Viny Kamdem Tagne     -Matricola:     759563      -Sede: VA
  *  * Agnes Balkaire Makouwe       -Matricola:     759700      -Sede: VA
  *  * Maercel Precieux Moukoko     -Matricola:     759674      -Sede: VA
- */
-
-/**
- *
- * @author MOUHAMMAD TOURE
- *
+ * 
  * Classe per il trasferimento dei dati da un file CSV al database PostgreSQL.
  * Legge i dati da un file CSV contenente informazioni sui libri e li inserisce
  * nella tabella corrispondente nel database.
+ * @author MOUHAMMAD TOURE
  */
 public class Trasferimento {
 
@@ -37,8 +31,7 @@ public class Trasferimento {
     private static Connection conn = null;
     
     /**
-     * Verifica se la tabella libri è vuota (non contiene dati).
-     * 
+     * Verifica se la tabella libri è vuota (non contiene dati). 
      * @return true se la tabella è vuota, false altrimenti
      */
     private static boolean isDatabaseEmpty() {

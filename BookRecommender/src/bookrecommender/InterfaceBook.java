@@ -3,6 +3,12 @@ package bookrecommender;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+/**
+ * Interfaccia RMI per il sistema BookRecommender.
+ * Definisce i metodi che possono essere invocati dai client per interagire con il server.
+ * Include funzionalità per visualizzare e cercare libri, gestire librerie, inserire valutazioni e consigli, e gestire account utente.
+ * @author Mouhammad Toure
+ */
 public interface InterfaceBook extends Remote {
 
   public String visualizzaLibri() throws RemoteException;

@@ -4,10 +4,21 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
 
+
+/**
+ * Classe principale del server BookRecommender.
+ * Si occupa di avviare il server RMI, creare il registry e gestire la connessione al database.
+ * Richiede la password del database all'avvio e gestisce eventuali errori.
+ * @version 1.0
+ * @author Mouhammad Toure
+ */
 public class Server {
 
     static final int PORT = 1099;
-    
+    /**
+     * Metodo principale per avviare il server.
+     * @param args
+     */
     public static void main(String[] args) {    
         try {
             System.out.println("=== BookRecommender Server ===");

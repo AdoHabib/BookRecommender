@@ -5,6 +5,13 @@ import java.rmi.registry.Registry;
 import java.util.Scanner;
 import java.util.UUID;
 
+/**
+ * Classe principale del client BookRecommender.
+ * Si occupa di connettersi al server RMI e fornire un'interfaccia testuale per interagire con il sistema.
+ * Gestisce le operazioni di visualizzazione, ricerca, gestione librerie, valutazioni, consigli e gestione account.
+ * @version 1.0
+ * @author Mouhammad Toure
+ */
 public class Client {
 
     private static final int PORT = 1099;
@@ -15,6 +22,12 @@ public class Client {
         this.sessionId = UUID.randomUUID().toString();
     }
 
+    /**
+     * Avvia il client e gestisce l'interfaccia testuale.
+     * Permette agli utenti di scegliere tra diverse opzioni e interagire con il server RMI.
+     * Gestisce eventuali errori di connessione e input non validi.
+     * @author Mouhammad Toure
+     */
     public void start() {
 
         try {
@@ -232,6 +245,12 @@ public class Client {
         }
     }
 
+    /**
+     * Legge un intero da una stringa, gestendo eventuali errori di formato.
+     * Permette di evitare crash del programma in caso di input non valido.
+     * @param intero
+     * @return
+     */
     private static int leggiIntero(String intero) {
         try {
             return Integer.parseInt(intero);
@@ -242,6 +261,12 @@ public class Client {
         }
     }
 
+    /**
+     * Punto di ingresso del client.
+     * Si connette al server RMI e avvia l'interfaccia testuale.
+     * Gestisce eventuali errori di connessione.
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);

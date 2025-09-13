@@ -6,7 +6,15 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.UUID;
 
+/**
+ * Interfaccia grafica per il client BookRecommender.
+ * Permette agli utenti di interagire con il sistema tramite un'interfaccia utente.
+ * Supporta funzionalità di visualizzazione, ricerca, gestione librerie, valutazioni, consigli e gestione account.
+ * Utilizza Swing per l'interfaccia grafica e RMI per la comunicazione con il server.
+ * @author Mouhammad Toure
+ */
 public class BookRecommenderGUI extends JFrame {
+    static final int PORT = 1099;
     private InterfaceBook interfaceBook;
     private String sessionId; // Session ID per questo client GUI
     private boolean isLoggedIn = false; // Stato di login
@@ -22,14 +30,17 @@ public class BookRecommenderGUI extends JFrame {
 
         // Connessione RMI
         try {
-            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            Registry registry = LocateRegistry.getRegistry("localhost", PORT);
             interfaceBook = (InterfaceBook) registry.lookup("BookRecommender");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Errore di connessione al server RMI: " + e.getMessage());
             System.exit(1);
         }
-
-        mostraMenuPrincipale();
+        if(!isLoggedIn){
+            mostraMenuPrincipale();
+        } else {
+            mostraMenuUtenteLoggato();
+        }
     }
 
     private void mostraMenuPrincipale() {
@@ -90,6 +101,7 @@ public class BookRecommenderGUI extends JFrame {
         JButton btnCercaTitolo = new JButton("Cerca Libro per Titolo");
         JButton btnCercaAutore = new JButton("Cerca Libro per Autore");
         JButton btnCercaAutoreAnno = new JButton("Cerca Libro per Autore e Anno");
+
         
         panel.add(btnVisualizzaLibri);
         panel.add(btnCercaTitolo);
@@ -122,15 +134,15 @@ public class BookRecommenderGUI extends JFrame {
         
         JButton btnInserisciValutazione = new JButton("Inserisci Valutazione Libro");
         JButton btnInserisciConsiglio = new JButton("Inserisci Consiglio Libro");
-        JButton btnRecuperaPassword = new JButton("Recupera Password");
-        JButton btnCambiaPassword = new JButton("Cambia Password");
-        JButton btnTestConnessione = new JButton("Test Connessione Database");
+        //JButton btnRecuperaPassword = new JButton("Recupera Password");
+        //JButton btnCambiaPassword = new JButton("Cambia Password");
+        //JButton btnTestConnessione = new JButton("Test Connessione Database");
         
         panel.add(btnInserisciValutazione);
         panel.add(btnInserisciConsiglio);
-        panel.add(btnRecuperaPassword);
-        panel.add(btnCambiaPassword);
-        panel.add(btnTestConnessione);
+        //panel.add(btnRecuperaPassword);
+        //panel.add(btnCambiaPassword);
+        //panel.add(btnTestConnessione);
         
         // Sezione Account
         JLabel lblAccount = new JLabel("👤 ACCOUNT");
@@ -164,9 +176,9 @@ public class BookRecommenderGUI extends JFrame {
         
         btnInserisciValutazione.addActionListener(e -> inserisciValutazione());
         btnInserisciConsiglio.addActionListener(e -> inserisciConsiglio());
-        btnRecuperaPassword.addActionListener(e -> mostraDialogRecuperaPassword());
-        btnCambiaPassword.addActionListener(e -> mostraDialogCambiaPassword());
-        btnTestConnessione.addActionListener(e -> testConnessioneDatabase());
+        //btnRecuperaPassword.addActionListener(e -> mostraDialogRecuperaPassword());
+        //btnCambiaPassword.addActionListener(e -> mostraDialogCambiaPassword());
+        //btnTestConnessione.addActionListener(e -> testConnessioneDatabase());
         
         btnLogout.addActionListener(e -> logout());
         btnTornaMenu.addActionListener(e -> {

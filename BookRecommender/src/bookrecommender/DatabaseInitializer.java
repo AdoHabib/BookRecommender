@@ -186,6 +186,7 @@ public class DatabaseInitializer {
     private void createLibriTable(Connection conn) throws SQLException {
         String sql = """
             CREATE TABLE IF NOT EXISTS libri (
+                libro_id SERIAL,
                 titolo VARCHAR(600) PRIMARY KEY,
                 autore VARCHAR(100),
                 genere VARCHAR(50),

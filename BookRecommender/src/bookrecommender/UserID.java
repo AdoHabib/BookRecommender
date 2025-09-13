@@ -1,9 +1,14 @@
 package bookrecommender;
 
-
-
-
-// Class per la gestione degli utenti nel sistema di raccomandazione libri
+ 
+/**
+ * Classe che rappresenta un utente nel sistema BookRecommender.
+ * E permette la gestione degli utenti nel sistema di raccomandazione libri
+ * Contiene informazioni come nome, codice fiscale, email, userID e password (in forma hash).
+ * Fornisce metodi per accedere e modificare queste informazioni in modo sicuro.
+ * @version 1.0
+ * @author Mouhammad Toure
+ */
 public class UserID {
 
     // Attributi della classe
@@ -30,8 +35,11 @@ public class UserID {
         this.password = hashedPassword(pass);  // Hash della password alla creazione
     }
     
-    // Metodi getter e setter
-    
+    /**
+     * Metodi getter e setter per gli attributi della classe
+     * @return I valori degli attributi o void per i setter
+     * @author Mouhammad Toure
+     */
     public String getNomeCognome() {
         return nomeCognome;
     }
@@ -89,7 +97,7 @@ public class UserID {
      * @return Stringa concatenata con i dati separati da virgola
      */
     public String toString2() {
-        return String.join(",", getNomeCognome(), getCodiceFiscale(), getEmail(), getUserID());
+        return String.join(",", getNomeCognome(), getCodiceFiscale(), getEmail(), getUserID(), getPassword());
     }
 
     /**
@@ -110,10 +118,10 @@ public class UserID {
         return this.password.equals(hashedPassword(password));
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         UserID user = new UserID("Mario Rossi", "RSSMRR80A01H501Z", "mario.rossi@example.com", "marioRossi", "password123");
         System.out.println(user.toString());
         System.out.println("Password check: " + user.checkPassword("password123"));
         System.out.println("Hashed password: " + user.hashedPassword("password123"));
-    }
+    }*/
 }
